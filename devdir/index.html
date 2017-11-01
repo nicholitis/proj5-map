@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      /*eugene: lat: 44.052071, lng: -123.086754 */
+      var marker = new google.maps.Marker({
+          position: {lat: 44.0058, lng: -122.9644},
+          map: map
+        });
+      var map, infoWindow;
+      function initMap() {
+        var uluru = {lat: 44.052071, lng: -123.086754};
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: marker
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtDlsdZNY-JIMuCFIKEnpRtAvTk3I3fE4&callback=initMap"
+    async defer></script>
+  </body>
+</html>

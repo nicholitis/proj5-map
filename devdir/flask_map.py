@@ -43,7 +43,20 @@ def page_not_found(error):
 #   These return JSON, rather than rendering pages.
 #
 ###############
+@app.route("/_map_location")
+def _map_location():
+    """
+    """
+    app.logger.debug("Got a JSON request")
+    km = request.args.get('km', 999, type=float)
+    brevet_dist = request.args.get('brevet_dist', 0, type=float)
+    date = request.args.get('date', 0, type=str)
+    time = request.args.get('time', 0, type=str)
 
+    open_time = acp_times.open_time(km, brevet_dist, brevet_start_time.isoformat())
+    close_time = acp_times.close_time(km, brevet_dist, brevet_start_time.isoformat())
+    result = {"open": open_time, "close": close_time}
+    return flask.jsonify(result=result)
 
 
 #############
