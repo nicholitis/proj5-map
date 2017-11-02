@@ -1,0 +1,47 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0993497,
+          44.0589107
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "BUDS LLC",
+        "address": "439 W 1st Ave, Eugene OR 97401"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0946906,
+          44.0499258
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "Oregon Medigreen Dispensary",
+        "address": "570 Lawrence St #112, Eugene OR 97402 "
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.0970652,
+          44.0516672
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "name": "SpaceBuds The Dispensary",
+        "address": "741 Lincoln St, Eugene OR 97401"
+      }
+    }
+  ]
+}
